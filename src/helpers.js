@@ -1,7 +1,8 @@
 
 // transforms icon data from the json into url for proper icon
 export function transformIcon(icon) {
-  return `http://openweathermap.org/img/w/${icon}.png`;
+  var url = `http://openweathermap.org/img/w/${icon}.png`;
+  return url;
 } 
 
 // transforms temperature from kelvin, and also adds celsious degree symbol
@@ -52,4 +53,13 @@ export function transformWindDirection(dir) {
 // converts mps to km/h - for wind speed
 export function transformWindSpeed(speed) {
   return (speed * 3.6).toFixed(1);
+}
+
+
+
+export function returnWeekDays(index = 0) {
+    var weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+    var today = weekDays[new Date().getDay() + index]
+	var todayIndex = weekDays.indexOf(today);
+	return weekDays.slice(todayIndex).concat(weekDays.slice(0, todayIndex)).slice(0, 7)
 }

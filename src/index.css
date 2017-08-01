@@ -16,18 +16,7 @@ h1 {
   margin: 60px auto;
 }
 
-.current {
-  margin: 100px auto;
-  margin-bottom: 60px;
-  width: 600px;
-  font-size: 1.2em;
-}
 
-
-.left {
-  margin-right: 120px;
-  float: left;
-}
 
 .forecast {
   margin-top: 150px;
@@ -42,5 +31,8 @@ h1 {
     width: 14.285714285714285714285714285714%;
     *width: 14.285714285714285714285714285714%;
   }
+
+
+
 }
 
