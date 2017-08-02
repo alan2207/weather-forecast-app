@@ -3,16 +3,14 @@ import ForecastDay from './ForecastDay';
 
 // component that renders list of days for the forecast
 
-import {returnWeekDays} from '../helpers'
-
-
+import {returnWeekDay} from '../helpers'
 
 
 export default function Forecast(props) {
 
     function renderDays() {
         return props.data.map((day, index) => {
-            return <ForecastDay weekday={returnWeekDays(index)[0]} key={index} data={day} />
+            return <ForecastDay weekday={returnWeekDay(index)} key={index} data={day} />
         });
     }
 

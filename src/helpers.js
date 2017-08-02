@@ -56,10 +56,9 @@ export function transformWindSpeed(speed) {
 }
 
 
-
-export function returnWeekDays(index = 0) {
+// returns weekday at the given index
+export function returnWeekDay(index = 0) {
     var weekDays = ['Sunday','Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
-    var today = weekDays[new Date().getDay() + index]
-	var todayIndex = weekDays.indexOf(today);
-	return weekDays.slice(todayIndex).concat(weekDays.slice(0, todayIndex)).slice(0, 7)
+    var today = weekDays[(new Date().getDay() + index) % weekDays.length];
+	  return today;
 }
